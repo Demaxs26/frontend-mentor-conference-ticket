@@ -1,57 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Conference ticket generator</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link href="style.css" rel="stylesheet" type="text/css" />  
+    <title>Frontend Mentor | Conference ticket generator</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+  </head>
+  <body>
+    <main>
 
-  <!-- Form starts -->
+      <!-- Form starts -->
 
-  Your Journey to Coding Conf 2025 Starts Here!
+      <section id = "form-sect">
+        <div class = 'box-app-name'>
+          <img src ="assets/images/logo-full.svg" alt = "app-logo"/>
+        </div>
+        <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+        <p class = 'text-descr'>Secure your spot at next year's biggest coding conference.</p>
+        <div class = "box-form">
+          <div class = "wrapper-input">
+            <label class = "label-input" for = "Avatar" >Upload Avatar</label>
+            <div class = "Avatar" >
+              <img class = "upload-svg"src = "assets/images/icon-upload.svg" alt = 'icon-upload'/>
+              <p class = "upload-text">Drag and drop or click to upload</p>
+            </div>
+            <div class = "box-info">
+              <img src="assets/images/icon-info.svg" alt="icon-info">
+              <p class = "text-info">Upload your photo (JPG or PNG, max size: 500KB).</p>
+            </div>
+          </div>
+          <div class = "wrapper-input">
+            <label class = "label-input" for = "Name" >Full Name</label>
+            <input type = "text" name = "Name" ></input>
+          </div>
+          <div class = "wrapper-input">
+            <label class = "label-input" for = "Address">Email Address</label>
+            <input type = "email" name = "Address" placeholder = "example@email.com" ></input>
+          </div>
+          <div class = "wrapper-input">
+            <label class = "label-input" for = "Username" >GitHub Username</label>
+            <input type = "text" name = "Username" placeholder = "@yourusername" ></input>
+          </div>
+          <div id = "button-generate">
+            <p class = "text-generate">Generate My Ticket</p>
+          </div>
+        </div>
+      </section>
 
-  Secure your spot at next year's biggest coding conference.
+      <!-- Form ends -->
 
-  Upload Avatar
-  Drag and drop or click to upload
-  Upload your photo (JPG or PNG, max size: 500KB).
+      <!-- Generated tickets starts -->
 
-  Full Name
+      <section id = "result-sect">
 
-  Email Address
-  example@email.com
+      </section>
 
-  GitHub Username
-  @yourusername
+      <!-- Generated tickets ends -->
 
-  Generate My Ticket
+    </main>
+    
 
-  <!-- Form ends -->
 
-  <!-- Generated tickets starts -->
 
-  Congrats, <!-- Full Name -->! Your ticket is ready.
+    
 
-  We've emailed your ticket to <!-- Email Address --> and will send updates in the run up to the event.
+   
+    
+    
 
-  Coding Conf
-  Jan 31, 2025 / Austin, TX
+    
 
-  <!-- Generated tickets ends -->
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    
+    
+
+    
+    
+
+    
+
+    
+
+   
+
+    Congrats, <!-- Full Name -->! Your ticket is ready.
+
+    We've emailed your ticket to <!-- Email Address --> and will send updates in the run up to the event.
+
+    Coding Conf
+    Jan 31, 2025 / Austin, TX
+
+    
+
+  </body>
 </html>

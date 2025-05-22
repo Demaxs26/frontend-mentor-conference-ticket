@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+
+:root{
+    --Neutral-0: hsl(0, 0%, 100%);
+    --Neutral-300: hsl(252, 6%, 83%);
+    --Neutral-500: hsl(245, 15%, 58%);
+    --Neutral-700: hsl(245, 19%, 35%,30%);
+    --Neutral-900: hsl(248, 70%, 10%);
+    --Orange-500: hsl(7, 88%, 67%);
+    --Orange-700: hsl(7, 71%, 60%);
+    --Gradient-text: hsl(7, 86%, 67%) to hsl(0, 0%, 100%);
+}
+*{
+    padding : 0;
+    margin :0;
+    font-family: 'Inconsolata';
+ 
+}
+main{
+    background-image:url("assets/images/pattern-circle.svg"),url("assets/images/pattern-lines.svg") ,url("assets/images/pattern-squiggly-line-top.svg"),url("assets/images/pattern-squiggly-line-bottom-desktop.svg"),url("assets/images/pattern-circle.svg"),url("assets/images/background-desktop.png");
+    background-repeat: no-repeat,no-repeat,no-repeat,no-repeat,no-repeat,no-repeat;
+    background-position: 5vw -20vh ,top ,right 10vh,0 bottom,64vw 75vh,center;
+    display: grid;
+    place-content: center;
+
+}
+
+#form-sect{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15vh;
+}
+.box-app-name{
+    align-self:center ;
+    margin: 5vh 0;
+}
+
+h1{
+    font-size: 4rem;
+    color : var(--Neutral-0);
+    text-align: center;
+    margin-bottom: 3vh;
+    width: 70vw;
+}
+
+.text-descr{
+    color: var(--Neutral-300);
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 10vh;
+}
+
+.wrapper-input{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3vh;
+}
+
+.label-input{
+    color: var(--Neutral-0);
+    margin-bottom: 1vh;
+    font-size: 20px;
+}
+
+.Avatar{
+    background-color: var(--Neutral-700);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: var(--Neutral-500) 2px dashed;
+    justify-content: space-evenly;
+    height: 100px;
+    width: 31vw;
+}
+
+.upload-text{
+    color : var(--Neutral-300)
+}
+
+.box-info{
+    color: var(--Neutral-500);
+    padding-top: 2vh;
+    display: flex;
+    justify-content: center;
+}
+
+.text-info{
+    margin-left: 0.7vw;
+}
+
+input[type = "text"], input[type = "email"]{
+    height: 7vh;
+    width: 30vw;
+    background: var(--Neutral-700);
+    border-radius: 0.5rem;
+    border : var(--Neutral-500) 1px solid;
+    padding-left: 1vw;
+    color: var(--Neutral-300);
+}
+
+input::placeholder{
+    color: var(--Neutral-300);
+}
+
+#button-generate{
+    background-color: var(--Orange-700);
+    height: 7vh;
+    width: 30vw;
+    padding-left: 1vw;
+    border-radius: 0.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px 0;
+    color:var(--Neutral-900) ;
+    font-weight: bold;
+
+}
+
+
+input:focus{
+    outline: var(--Neutral-500) 2px solid;
+    outline-offset: 0.2rem;
+}
+
+#button-generate:hover{
+    border : var(--Neutral-900) 1px solid;
+    outline: var(--Neutral-300) 1px solid;
+    margin-bottom: 0;
+}
+
+#button-generate:active{
+    background-color: var(--Neutral-900);
+    color: var(--Orange-700);
+}
