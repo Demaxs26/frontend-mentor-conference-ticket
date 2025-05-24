@@ -27,7 +27,7 @@ main{
 }
 
 #form-sect{
-    display: flex;
+    display: none; /* flex  */
     flex-direction: column;
     align-items: center;
     margin-bottom: 15vh;
@@ -50,12 +50,14 @@ h1{
     font-size: 1.2rem;
     text-align: center;
     margin-bottom: 10vh;
+    
 }
 
 .wrapper-input{
     display: flex;
     flex-direction: column;
     margin-bottom: 3vh;
+    
 }
 
 .label-input{
@@ -85,6 +87,21 @@ h1{
     padding-top: 2vh;
     display: flex;
     justify-content: center;
+}
+
+.box-info-error{
+    color : var(--Orange-700);
+}
+.svg-info{
+    color : var(--Neutral-300)
+}
+
+.svg-round,.svg-point,.svg-stroke{
+    stroke:var(--Orange-700);
+}
+
+.box-info{
+    align-self: flex-start;
 }
 
 .text-info{
@@ -136,4 +153,18 @@ input:focus{
 #button-generate:active{
     background-color: var(--Neutral-900);
     color: var(--Orange-700);
+}
+
+.box-ticket{
+    background-image: url("assets/images/pattern-ticket.svg");
+    height: 60vh;
+    width: 40vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#result-sect{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
