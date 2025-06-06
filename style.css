@@ -76,6 +76,7 @@ h1{
     justify-content: space-evenly;
     height: 100px;
     width: 31vw;
+    padding: 0.4rem 0;
 }
 
 .upload-text{
@@ -135,14 +136,17 @@ input::placeholder{
     margin: 4px 0;
     color:var(--Neutral-900) ;
     font-weight: bold;
-
+    cursor: pointer;
 }
 
 
-input:focus{
+input:focus,.dropPlaceOver{
     outline: var(--Neutral-500) 2px solid;
     outline-offset: 0.2rem;
 }
+
+
+
 
 #button-generate:hover{
     border : var(--Neutral-900) 1px solid;
@@ -185,6 +189,7 @@ input:focus{
 
 .avatar-image{
     width: 50px;
+    height: 50px;
     border-radius: 5px;
 }
 
@@ -222,4 +227,42 @@ input:focus{
 
 .ErrAvatar{
     display: none;
+}
+
+.avatarCompleted{
+    place-items:  center;
+    display: none;
+    flex-direction: column;
+}
+
+.avatarNotCompleted{
+    place-items:  center;
+    display: flex;
+    flex-direction: column;
+}
+
+.boxButtonAvatar{
+    display: flex;
+    flex-direction: row;
+}
+
+.button-avatar{
+    color: var(--Neutral-0);
+    cursor: pointer;
+    background-color: var(--Neutral-700);
+    padding: 0.3rem 0.4rem;
+    border-radius: 0.3rem;
+}
+
+.button-avatar:has( +.button-avatar){
+    margin-right: 0.4rem;
+}
+
+.button-avatar:hover{
+    text-decoration: underline;
+}
+
+.imageAvatarCompleted{
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
 }
