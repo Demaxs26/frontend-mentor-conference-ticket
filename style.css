@@ -9,7 +9,7 @@
     --Neutral-900: hsl(248, 70%, 10%);
     --Orange-500: hsl(7, 88%, 67%);
     --Orange-700: hsl(7, 71%, 60%);
-    --Gradient-text: hsl(7, 86%, 67%) to hsl(0, 0%, 100%);
+    --Gradient-text:  -webkit-linear-gradient(45deg , hsl(7, 86%, 67%), hsl(0, 0%, 100%));
 }
 *{
     padding : 0;
@@ -23,11 +23,13 @@ main{
     background-position: 5vw -20vh ,top ,right 10vh,0 bottom,64vw 75vh,center;
     display: grid;
     place-content: center;
-
+    
 }
 
+
+
 #form-sect{
-    display: flex; /* flex  */
+    display: none; /* flex  */
     flex-direction: column;
     align-items: center;
     margin-bottom: 15vh;
@@ -53,10 +55,17 @@ h1{
     
 }
 
+.box-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .wrapper-input{
     display: flex;
     flex-direction: column;
     margin-bottom: 3vh;
+    align-items: center;
     
 }
 
@@ -64,6 +73,7 @@ h1{
     color: var(--Neutral-0);
     margin-bottom: 1vh;
     font-size: 20px;
+    align-self: self-start;
 }
 
 .Avatar{
@@ -161,41 +171,57 @@ input:focus,.dropPlaceOver{
 
 .box-ticket{
     background-image: url("assets/images/pattern-ticket.svg");
-    height: 60vh;
-    width: 30vw; 
+    height:256px;
+    width: 600px;
     background-size: contain;
     background-repeat: no-repeat;
     padding: 2vw 2vw;
+    margin-top : 5vh;
+    margin-bottom: 30vh;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 #result-sect{
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
-
+.inner-ticker{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .text-descr-ticket{
     color: var(--Neutral-300);
-    font-size: 1.2rem;
-    margin-bottom: 10vh;
+    font-size: 1.6rem;
+
+}
+
+.top-ticket > .text-descr-ticket{
+    margin-left: 76px;
 }
 
 .ticket-name{
     color: var(--Neutral-0);
-    font-size: 1.5rem;
+    font-size: 1.9rem;
 }
 
-.avatar-image{
-    width: 50px;
+.mark-logo-ticket{
+
     height: 50px;
+}
+.avatar-image{
+    width: 75px;
+    height: 75px;
     border-radius: 5px;
 }
 
 .bottom-ticket{
     display: flex;
     flex-direction: row;
+
 }
 
 .ticket-git-info{
@@ -213,12 +239,11 @@ input:focus,.dropPlaceOver{
 
 
 .aside-ticket{
-    margin-left : 20vh;
-    margin-top: 7vh;
+    align-self: center;
     writing-mode: vertical-rl;
     text-orientation: mixed;
     color : var(--Neutral-500);
-    font-size: 1.2rem;
+    font-size: 1.6rem;
 }
 
 .ErrEmail{
@@ -266,3 +291,80 @@ input:focus,.dropPlaceOver{
     border-radius: 0.5rem;
     margin-bottom: 0.5rem;
 }
+
+
+.gradient-text{
+    background:var(--Gradient-text);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.colored-text{
+    color : var(--Orange-700)
+}
+
+#result-sect > .text-descr{
+    width: 45vw;
+}
+@media screen and (max-width : 770px){
+
+    #form-sect{
+        padding : 2vw;
+
+    }
+    h1{
+        font-size: 2rem;
+        width: 85vw;
+    }
+
+    input[type = "text"], input[type = "email"]{
+        width: 95vw;
+        font-size: 1.1;
+        padding-left: 2vw;
+    }
+    .Avatar{
+        width: 95vw;
+    }
+    #button-generate{
+        width: 95vw;
+        font-size: 1.2rem;
+    }
+    input::placeholder{
+        font-size: 1.1rem;
+    }
+    .box-ticket{
+        width: 85vw;
+        height: calc(85vw * 0.42);
+        padding: 2vh;
+    }
+    #result-sect > .text-descr{
+        width: 85vw;
+        margin-bottom: 2vh;
+    }
+    .text-descr-ticket{
+        font-size: 3vw;
+    }
+    .mark-logo-ticket{
+
+        height: 6vw;
+    }
+
+    .avatar-image{
+        width: 9vw;
+        height: 9vw;
+    }
+    .ticket-name{
+        font-size: 5vw;
+    }
+    .icon-github{
+        width: 3vw;
+    }
+    .top-ticket > .text-descr-ticket{
+        margin-left: 8vw;
+    }
+    .aside-ticket{
+        font-size: 5vw;
+    }
+}
+
